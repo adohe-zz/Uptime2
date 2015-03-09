@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "express": "4.12.2",
-    "influx": "3.3.0"  
+    "influx": "3.3.0",
+    "config": "1.12.0",
+    "mongoose": "3.8.24"  
   },
   "keywords": [
     "service",
