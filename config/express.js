@@ -10,4 +10,12 @@ var env = process.env.NODE_ENV || 'development';
  */
 module.exports = function(app, config) {
 
+  // Compression middleware (should be placed before express.static)
+  app.use(compression({
+    threshold: 512
+  }));
+
+  // Static file middleware
+  app.use(express.static(config.root + '/public'));
+
 }
