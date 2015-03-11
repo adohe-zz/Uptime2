@@ -5,7 +5,8 @@ var express = require('express'),
     morgan = require('morgan'),
     swig = require('swig'),
     cookieParser = require('cookieParser'),
-    cookieSession = require('cookieSession');
+    cookieSession = require('cookieSession'),
+    errorhandler = require('errorhandler');
 
 var env = process.env.NODE_ENV || 'development';
 
@@ -42,7 +43,9 @@ module.exports = function(app, config) {
   if(env !== 'test') app.use(morgan(log));
 
   // Error handler setting
-
+  if(env === 'development' || env === 'test') {
+    app.use(errorhandler());
+  }
 
   // Swig template engine setting
   if(env === 'development' || env === 'test') {
