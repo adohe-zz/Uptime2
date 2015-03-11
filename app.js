@@ -4,10 +4,14 @@
  */
 var http = require('http'),
     express = require('express'),
-    config = require('config'),
-    socketIo = require('socket.io');
+    mongoose = require('mongoose'),
+    config = require('config');
 
-var app = express();
+var app = express(),
+    server = http.createServer(app);
 
+var connect = function() {
+
+}
 // Expose
 module.exports = app;
