@@ -5,4 +5,6 @@ var fs = require('fs'),
 // start the monitor
 var monitor = Monitor.createMonitor(config.monitor);
 
+monitor.start();
+
 module.export = monitor;
