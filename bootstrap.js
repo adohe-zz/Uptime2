@@ -40,4 +40,7 @@ mongoose.connection.on('open', function(err){
 // Re-connect when connection disconnected
 mongoose.connection.on('disconnected', connect);
 
+/*
+ * Expose
+ */
 module.exports = mongoose;
