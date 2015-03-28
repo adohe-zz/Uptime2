@@ -7,4 +7,7 @@ var monitor = Monitor.createMonitor(config.monitor);
 
 monitor.start();
 
+/*
+*Expose
+*/
 module.export = monitor;
